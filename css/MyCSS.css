@@ -1,0 +1,40 @@
+ .otto
+        {
+            text-align: center;
+            font-size: x-large;
+           
+            font-weight: bold;
+            color: white;
+            height: 30px;
+            text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
+        }
+        .box
+        {
+            box-shadow: 0.2px 0.2px 8px 0.2px;
+        }
+        
+        .button
+        {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 3px;
+            text-shadow: 0px -2px 12px rgba(30, 30, 30, 0.8);
+            -webkit-border-radius: 7.297297297297297px;
+            -moz-border-radius: 7.297297297297297px;
+            border-radius: 7.297297297297297px;
+            background: rgb(177, 9, 20);
+            background: -moz-linear-gradient(90deg, rgb(177, 9, 20) 52%, rgb(250, 69, 122) 83%);
+            background: -webkit-linear-gradient(90deg, rgb(177, 9, 20) 52%, rgb(250, 69, 122) 83%);
+            background: -o-linear-gradient(90deg, rgb(177, 9, 20) 52%, rgb(250, 69, 122) 83%);
+            background: -ms-linear-gradient(90deg, rgb(177, 9, 20) 52%, rgb(250, 69, 122) 83%);
+            background: linear-gradient(0deg, rgb(177, 9, 20) 52%, rgb(250, 69, 122) 83%);
+            -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+        }
+        
+        .search
+        {
+            background: url(~/images/search.png) no-repeat;
+            background-position: center;
+        }

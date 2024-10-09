@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <SqlCon Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>SqlCon</Alias>
+        <ConnectionStringEncrypted>+X5lzcVKk83iS02UZoitF95gZQlPGMOdYgjtlE1woGPDeNEoyAUi3UZHyVjpmKRG0Xj7icl+k/F/Sb3cY5xl695qactNQXv1bkSc3GEYIXuQVvcJTgOjBWtdzfRkVKgnkBTLAsVZe91oW+is6mz2J99g94hNS5LdYgjZ2GkA4y/EFPUrxks=</ConnectionStringEncrypted>
+        <Name>SqlCon</Name>
+      </SqlCon>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <Vw_CRMReceiveEquipmentCustTransDetails Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Vw_CRMReceiveEquipmentCustTransDetails</Alias>
+        <Columns isList="true" count="65">
+          <value>ACCESSORIES,System.String</value>
+          <value>ACCESSORIES_SERIEL,System.String</value>
+          <value>ADDR_LINE1,System.String</value>
+          <value>ADDR_LINE2,System.String</value>
+          <value>ADDR_LINE3,System.String</value>
+          <value>BRANCH_ID,System.String</value>
+          <value>CITY,System.String</value>
+          <value>CONTACT_NO,System.String</value>
+          <value>CONTACT_PERSON,System.String</value>
+          <value>COUNTRY,System.String</value>
+          <value>CREATED_BY,System.String</value>
+          <value>CREATED_DATE,System.DateTime</value>
+          <value>CUSTOMER_ID,System.String</value>
+          <value>CUSTOMER_NAME,System.String</value>
+          <value>DELETED,System.String</value>
+          <value>DISCRIPENCY,System.String</value>
+          <value>EMAIL,System.String</value>
+          <value>EQUIPMENT_ID,System.String</value>
+          <value>EQUIPMENT_NAME,System.String</value>
+          <value>EQUIPMENT_NO,System.String</value>
+          <value>FAX_NO,System.String</value>
+          <value>FEE,System.String</value>
+          <value>FILE_PATH,System.String</value>
+          <value>functional,System.String</value>
+          <value>GUID,System.String</value>
+          <value>IntervalByMonthYear,System.String</value>
+          <value>IntervalNo,System.Int64</value>
+          <value>JOBNO,System.String</value>
+          <value>MAKER,System.String</value>
+          <value>MASTER_CONTRACT_ID,System.String</value>
+          <value>MODEL,System.String</value>
+          <value>MODIFIED_BY,System.String</value>
+          <value>MODIFIED_DATE,System.DateTime</value>
+          <value>NextCalibrationDate,System.DateTime</value>
+          <value>OrderNo,System.Int64</value>
+          <value>physical,System.String</value>
+          <value>POSTAL_CODE,System.String</value>
+          <value>QUOTATION_ID,System.String</value>
+          <value>RANGES,System.String</value>
+          <value>RECEIVED_DATE,System.DateTime</value>
+          <value>RECEIVED_ID,System.String</value>
+          <value>RECEIVED_TRANS_DETAIL_ID,System.String</value>
+          <value>RECEIVED_TRANS_ID,System.String</value>
+          <value>REMARKS,System.String</value>
+          <value>RunningNo,System.Int64</value>
+          <value>SERIEL_NO,System.String</value>
+          <value>STATE,System.String</value>
+          <value>STATUS,System.String</value>
+          <value>STATUS_TRANS,System.String</value>
+          <value>WEBSITE,System.String</value>
+          <value>jbno,System.String</value>
+          <value>Todate,System.String</value>
+          <value>QUOTATION_TRANS_ID,System.Decimal</value>
+          <value>Invoiceflag,System.Int32</value>
+          <value>QUOTATION_NO,System.String</value>
+          <value>QUOTATION_DATE,System.DateTime</value>
+          <value>RejectRemarks,System.String</value>
+          <value>CONTACT_ID,System.Decimal</value>
+          <value>AssignID,System.Decimal</value>
+          <value>Calibration,System.String</value>
+          <value>Delivery,System.Int32</value>
+          <value>RejectionDate,System.DateTime</value>
+          <value>ToReject,System.String</value>
+          <value>YourRef,System.String</value>
+          <value>REMARKS_DETAIL,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Vw_CRMReceiveEquipmentCustTransDetails</Name>
+        <NameInSource>SqlCon</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select *,Convert(nvarchar(50),jobno)+'-'+Convert(nvarchar(50),runningno) as jbno,CONVERT(VARCHAR(10), CREATED_DATE, 103) AS [Todate] from Vw_CRMReceiveEquipmentCustTransDetails where deleted=0 and QUOTATION_ID=10038 and seriel_no is not null</SqlCommand>
+      </Vw_CRMReceiveEquipmentCustTransDetails>
+      <Invoice Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Invoice</Alias>
+        <Columns isList="true" count="13">
+          <value>CREATED_BY,System.String</value>
+          <value>CREATED_DATE,System.DateTime</value>
+          <value>Customer_Id,System.String</value>
+          <value>DELETED,System.Boolean</value>
+          <value>Invoice_Date,System.DateTime</value>
+          <value>Invoice_Id,System.String</value>
+          <value>Invoice_No,System.String</value>
+          <value>JobNo,System.String</value>
+          <value>MODIFIED_BY,System.String</value>
+          <value>MODIFIED_DATE,System.DateTime</value>
+          <value>Quotation_Id,System.String</value>
+          <value>RECEIVED_TRANS_DETAIL_ID,System.String</value>
+          <value>RunningNo,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Invoice</Name>
+        <NameInSource>SqlCon</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Invoice where Invoice_Id=48</SqlCommand>
+      </Invoice>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <ReportTitleBand1 Ref="6" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1.2</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </ReportTitleBand1>
+        <Table1 Ref="7" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.8,19,0.8</ClientRectangle>
+          <ColumnCount>6</ColumnCount>
+          <Components isList="true" count="6">
+            <Table1_Cell1 Ref="8" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,0.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7e322930c5124de4bd269b7e7229dd6b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell1</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Line}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell1>
+            <Table1_Cell2 Ref="9" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.8,0,4.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>69c03908ec154beaad0aea8bde034ce4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell2</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Vw_CRMReceiveEquipmentCustTransDetails.EQUIPMENT_NAME}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell2>
+            <Table1_Cell3 Ref="10" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>78b7c03e7f894c77853278e7eaa0646f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell3</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Vw_CRMReceiveEquipmentCustTransDetails.JOBNO}-{Vw_CRMReceiveEquipmentCustTransDetails.RunningNo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell3>
+            <Table1_Cell4 Ref="11" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.6,0,4.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>15c4c43dd0504da5a9b9052bdf9043d1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell4</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Vw_CRMReceiveEquipmentCustTransDetails.MAKER}/{Vw_CRMReceiveEquipmentCustTransDetails.MODEL}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell4>
+            <Table1_Cell5 Ref="12" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b144ae03afb74c4aa78dfccd33e14e71</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell5</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Vw_CRMReceiveEquipmentCustTransDetails.SERIEL_NO}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell5>
+            <Table1_Cell6 Ref="13" type="TableCell" isKey="true">
+              <Border>All;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.8,0,4.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b67f9c75aaaf48c6ad4369adcaad4772</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <ID>25</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>Table1_Cell6</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Vw_CRMReceiveEquipmentCustTransDetails.ACCESSORIES}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Table1_Cell6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Vw_CRMReceiveEquipmentCustTransDetails</DataSourceName>
+          <DockableTable>False</DockableTable>
+          <Filters isList="true" count="0" />
+          <Guid>4b4736be7ac5468da3debafe0b19e1c0</Guid>
+          <MinHeight>0.2</MinHeight>
+          <Name>Table1</Name>
+          <NumberID>26</NumberID>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <RowCount>1</RowCount>
+          <Sort isList="true" count="0" />
+        </Table1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>960e5098c86047289f4efd496750e9dd</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="14" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <ImageStretch>True</ImageStretch>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="15" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/26/2020 5:48:47 PM</ReportChanged>
+  <ReportCreated>1/23/2015 11:35:20 AM</ReportCreated>
+  <ReportFile>C:\inetpub\wwwroot\Politeknik\Reports\old\RegisterTest.mrt</ReportFile>
+  <ReportGuid>6e839d9905c34f1b8fbbfee6c360636d</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.2.1700</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
